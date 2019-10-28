@@ -72,7 +72,7 @@ async def horoscopo(ctx, arg):
         r = requests.get(url="http://babi.hefesto.io/signo/{}/dia".format(arg))
         await ctx.send(r.json()['texto'])
     except:
-        await ctx.send('Are you dumb?')
+        await ctx.send('Are you smart?')
 
 
 bot.run(os.environ['DISCORD_APP_TOKEN'])
