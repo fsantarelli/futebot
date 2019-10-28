@@ -63,7 +63,7 @@ async def youtube(ctx, *args):
         search_results = re.findall(r'href=\"\/watch\?v=(.{11})', html_content.read().decode())
         await ctx.send("http://www.youtube.com/watch?v=" + search_results[0])
     except:
-        await ctx.send('Are you smart?')
+        await ctx.send('Are you dumb?')
 
 
 @bot.command()
@@ -72,7 +72,7 @@ async def horoscopo(ctx, arg):
         r = requests.get(url="http://babi.hefesto.io/signo/{}/dia".format(arg))
         await ctx.send(r.json()['texto'])
     except:
-        await ctx.send('Are you smart?')
+        await ctx.send('Are you dumb?')
 
 
 bot.run(os.environ['DISCORD_APP_TOKEN'])
